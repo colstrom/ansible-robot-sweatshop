@@ -1,0 +1,12 @@
+---
+robot_sweatshop_user: ci-bot
+robot_sweatshop_group: wcadmin
+robot_sweatshop_user_email: justin.scott1@telus.com
+
+robot_sweatshop_log_root: "{{ log_root | default('/var/log') }}/robot_sweatshop"
+robot_sweatshop_runtime_root: "{{ runtime_root | default('/var/run') }}/robot_sweatshop"
+robot_sweatshop_config_root: /etc/robot_sweatshop
+robot_sweatshop_db_root: /data/db/robot_sweatshop
+
+robot_sweatshop_http_input_port: 8080
+robot_sweatshop_http_input_host: 0.0.0.0

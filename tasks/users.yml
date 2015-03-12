@@ -1,0 +1,12 @@
+---
+- name: "User | {{ robot_sweatshop_user }}"
+  user:
+    state: present
+    name: "{{ robot_sweatshop_user }}"
+    uid: 3090215
+    group: "{{ robot_sweatshop_group }}"
+    shell: /bin/bash
+    comment: "{{ robot_sweatshop_user }} (robot_sweatshop)"
+  tags:
+    - robot_sweatshop
+    - user

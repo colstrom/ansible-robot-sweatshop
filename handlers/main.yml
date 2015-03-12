@@ -1,0 +1,7 @@
+---
+- name: Reload Service | robot_sweatshop
+  service:
+    state: reloaded
+    name: robot_sweatshop
+  tags:
+    - disruptive
