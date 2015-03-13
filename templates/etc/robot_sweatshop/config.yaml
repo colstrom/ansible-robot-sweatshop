@@ -1,7 +1,7 @@
 ---
 common:
   pidfile_directory: {{ robot_sweatshop_runtime_root }}
-  logfile_directory: {{ robot_sweatshop_logfile_root }}
+  logfile_directory: {{ robot_sweatshop_log_root }}
   user_config_directory: {{ robot_sweatshop_config_root }}
 
 input:

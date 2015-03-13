@@ -33,7 +33,7 @@
 #     line: "{{ item.key }}: {{ item.value }}"
 #   with_items:
 #     - { key: pidfile_directory, value: "{{ robot_sweatshop_runtime_root }}" }
-#     - { key: logfile_directory, value: "{{ robot_sweatshop_logfile_root }}" }
+#     - { key: logfile_directory, value: "{{ robot_sweatshop_log_root }}" }
 #     - { key: port,              value: "{{ robot_sweatshop_server_port }}" }
 #     - { key: moneta_directory,  value: "{{ robot_sweatshop_db_root }}" }
 #   notify: Reload Service | mci-server
