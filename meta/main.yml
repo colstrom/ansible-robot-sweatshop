@@ -6,7 +6,9 @@ dependencies:
   - role: package/upstart
     upstart_name: robot_sweatshop
     upstart_description: robot_sweatshop
-    upstart_exec_path: /usr/local/bin/sweatshop start
+    upstart_exec_path: /usr/local/bin/sweatshop
+    upstart_exec_flags:
+      - start
     upstart_user: "{{ robot_sweatshop_user }}"
     upstart_group: "{{ robot_sweatshop_group }}"
 
