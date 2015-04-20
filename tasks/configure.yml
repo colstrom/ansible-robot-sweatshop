@@ -24,6 +24,8 @@
     group: "{{ robot_sweatshop_group }}"
     mode: 0664
   notify: Reload Service | robot_sweatshop
+  tags:
+    - robot_sweatshop
 
 # - name: Configure | robot_sweatshop
 #   lineinfile:
@@ -41,3 +43,16 @@
 #     - configuration
 #     - precise-configuration
 #     - robot_sweatshop
+
+- name: "Upload Config | robot_sweatshop | {{ item.name }} job"
+  template:
+    src: etc/robot_sweatshop/jobs/job.yaml
+    dest: "{{ robot_sweatshop_config_root }}/jobs/{{ item.name }}.yaml"
+    owner: "{{ robot_sweatshop_user }}"
+    group: nogroup
+    mode: 0644
+  with_items: robot_sweatshop_jobs
+  notify: Reload Service | robot_sweatshop
+  tags:
+    - robot_sweatshop
+    - job-configuration

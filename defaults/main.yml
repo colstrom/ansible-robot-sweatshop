@@ -10,3 +10,5 @@ robot_sweatshop_db_root: /data/db/robot_sweatshop
 
 robot_sweatshop_http_input_port: 30080
 robot_sweatshop_http_input_host: 0.0.0.0
+
+robot_sweatshop_jobs: no
