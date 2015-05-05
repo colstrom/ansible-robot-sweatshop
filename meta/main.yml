@@ -9,8 +9,6 @@ dependencies:
     upstart_exec_path: /usr/local/bin/sweatshop
     upstart_exec_flags:
       - start
-    upstart_user: "{{ robot_sweatshop_user }}"
-    upstart_group: "{{ robot_sweatshop_group }}"
 
 # New logging method awaiting mci regex formatting
 #   - role: package/fluentd
