@@ -26,3 +26,5 @@ dependencies:
     upstart_exec_path: /usr/local/bin/sweatshop
     upstart_exec_flags:
       - start
+    upstart_user: "{{ robot_sweatshop_user }}"
+    upstart_user: "{{ robot_sweatshop_group }}"

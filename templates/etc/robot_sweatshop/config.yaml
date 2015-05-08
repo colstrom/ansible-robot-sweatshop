@@ -4,7 +4,5 @@ logfile_path: {{ robot_sweatshop_log_root }}
 job_path: {{ robot_sweatshop_config_root }}/jobs
 workspace_path: {{ robot_sweatshop_config_root }}/workspaces
 moneta_path: {{ robot_sweatshop_db_root }}
-user: {{ robot_sweatshop_user }}
-group: {{ robot_sweatshop_group }}
 http_port: {{ robot_sweatshop_http_input_port }}
 http_bind: {{ robot_sweatshop_http_input_host }}
