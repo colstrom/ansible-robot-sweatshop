@@ -1,9 +1,0 @@
----
-- name: "Group | {{ robot_sweatshop_group }}"
-  group:
-    state: present
-    gid: 3090216
-    name: "{{ robot_sweatshop_group }}"
-  tags:
-    - robot_sweatshop
-    - group
