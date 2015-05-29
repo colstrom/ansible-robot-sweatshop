@@ -1,4 +1,2 @@
 ---
-- include: groups.yml
-- include: users.yml
 - include: configure.yml

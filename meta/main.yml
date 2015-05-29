@@ -1,18 +1,30 @@
 ---
+galaxy_info:
+  author: "Justin Scott"
+  description: "Continuous Integration without pet servers or the JVM."
+  license: "MIT"
+  platforms:
+    - name: "Ubuntu"
+      versions:
+        - "trusty"
+    - name: "GenericUNIX"
+      versions:
+        - "any"
+    - name: "GenericBSD"
+      versions:
+        - "any"
+  categories:
+    - "system"
+    - "development"
 dependencies:
-  - role: package/ruby
+  - role: telusdigital.ruby
     ruby_gems:
       - robot_sweatshop
-  - role: package/upstart
+  - role: telusdigital.upstart
     upstart_name: robot_sweatshop
     upstart_description: robot_sweatshop
-    upstart_exec_path: /usr/local/bin/sweatshop start
+    upstart_exec_path: /usr/local/bin/sweatshop
+    upstart_exec_flags:
+      - start
     upstart_user: "{{ robot_sweatshop_user }}"
-    upstart_group: "{{ robot_sweatshop_group }}"
-
-# New logging method awaiting mci regex formatting
-#   - role: package/fluentd
-#     fluentd_sources:
-#       - path: "{{ mci_worker_log_path }}"
-#         format: ''
-#         tag: mci.worker
+    upstart_user: "{{ robot_sweatshop_group }}"
